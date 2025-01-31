@@ -2,10 +2,7 @@ body {
   color: #333;
   font-family: "Noto Sans JP", "Outfit", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", meiryo, serif;
   font-weight: 100;
-  line-height: 1.5;
   font-size: 3.5897435897vw;
-  font-feature-settings: "palt";
-  letter-spacing: 0.04em;
   font-size: 4.1025641026vw;
 }
 @media screen and (min-width: 768px) {
@@ -126,11 +123,9 @@ img {
 }
 .header__button {
   font-size: 3.0769230769vw;
-  padding: 2.0512820513vw 5.1282051282vw 2.0512820513vw 2.5641025641vw;
-  font-feature-settings: "palt";
+  padding: 1.7948717949vw 4.6153846154vw 1.7948717949vw 2.5641025641vw;
   letter-spacing: 0.04em;
   text-align: left;
-  line-height: 1;
 }
 @media screen and (min-width: 768px) {
   .header__button {
@@ -146,7 +141,7 @@ img {
 }
 .header__span {
   font-size: 2.5641025641vw;
-  margin-left: 10px;
+  margin-left: 0.5128205128vw;
 }
 @media screen and (min-width: 768px) {
   .header__span {
@@ -263,7 +258,6 @@ img {
   .mainvisual__bg {
     font-size: 2.8155339806vw;
     margin-bottom: 1.9417475728vw;
-    letter-spacing: -0.013em;
     padding: 0.9708737864vw 0 1.2621359223vw 0.8737864078vw;
     width: 10.1941747573vw;
   }
@@ -324,7 +318,7 @@ img {
 }
 .mainvisual__list {
   width: 34.1025641026vw;
-  margin: 5.3846153846vw auto 0;
+  margin: 6.1538461538vw 6.6666666667vw 0 auto;
 }
 @media screen and (min-width: 768px) {
   .mainvisual__list {
@@ -342,7 +336,7 @@ img {
   text-align: right;
   font-size: 3.5897435897vw;
   padding-right: 6.1538461538vw;
-  margin-top: 1.0256410256vw;
+  margin-top: 1.5384615385vw;
 }
 @media screen and (min-width: 768px) {
   .mainvisual__subscribe {
@@ -361,7 +355,6 @@ img {
 .mainvisual__subscribe-price {
   font-family: "Outfit", serif;
   font-weight: 400;
-  letter-spacing: 0;
 }
 .mainvisual__subscribe-month {
   font-size: 2.3076923077vw;
@@ -382,7 +375,6 @@ img {
   border: 1px solid #fff;
   line-height: 1;
   text-align: center;
-  letter-spacing: 0;
   margin-bottom: 3.3333333333vw;
 }
 @media screen and (min-width: 768px) {
@@ -437,3 +429,76 @@ img {
 .button--attention {
   background: #fa7da3;
 }
+
+.box__title {
+  line-height: 1;
+  padding: 3.5897435897vw;
+  background: #fa7da3;
+  color: #fff;
+  font-size: 4.6153846154vw;
+  text-align: center;
+  border-radius: 2.5641025641vw 2.5641025641vw 0 0;
+}
+.box__title--large {
+  font-size: 5.3846153846vw;
+  padding: 1.0256410256vw 1.7948717949vw 1.5384615385vw;
+}
+.box__body {
+  border: 1px solid #fa7da3;
+  padding: 5.1282051282vw;
+  border-radius: 0 0 2.5641025641vw 2.5641025641vw;
+}
+
+.space {
+  margin-left: 5px;
+}
+
+.news {
+  background: #fffedd;
+}
+.news__container {
+  padding: 5.8974358974vw 5.1282051282vw 4.1025641026vw;
+}
+.news__title {
+  color: #fa7da3;
+  font-size: 5.3846153846vw;
+  position: relative;
+  text-align: center;
+  margin-bottom: 3.5897435897vw;
+}
+.news__title::before, .news__title::after {
+  position: absolute;
+  display: block;
+  background-color: #1e90ff;
+  content: "";
+  height: 2px;
+  width: 27px;
+  top: 50%;
+}
+.news__title::before {
+  left: 32%;
+  transform: rotate(60deg);
+}
+.news__title::after {
+  transform: rotate(-60deg);
+  right: 32%;
+}
+.news__body {
+  text-align: center;
+  background: #fff;
+  font-size: 6.9230769231vw;
+  padding: 1.7948717949vw 2.3076923077vw 3.0769230769vw 2.3076923077vw;
+}
+.news__text {
+  font-size: 6.9230769231vw;
+  line-height: 1;
+  color: #fa7da3;
+}
+.news__text--large {
+  font-size: 10.7692307692vw;
+}
+.news__note {
+  font-size: 2.5641025641vw;
+  margin-top: 1.7948717949vw;
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */

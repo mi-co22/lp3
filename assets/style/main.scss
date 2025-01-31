@@ -76,10 +76,10 @@
 
     &__button {
         font-size: vw(12);
-        padding: vw(8) vw(20) vw(8) vw(10);
+        padding: vw(7) vw(18) vw(7) vw(10);
         @include l_spacing(40);
         text-align: left;
-        line-height: 1;
+        // line-height: 1;
 
         @include mq {
             font-size: vwt(21);
@@ -97,7 +97,7 @@
 
     &__span {
         font-size: vw(10);
-        margin-left: 10px;
+        margin-left: vw(2);
 
         @include mq {
             font-size: vwt(18);
@@ -222,7 +222,7 @@
         @include mq {
             font-size: vwt(29);
             margin-bottom: vwt(20);
-            letter-spacing: -0.013em;
+            // letter-spacing: -0.013em;
             padding: vwt(10) 0 vwt(13) vwt(9);
             width: vwt(105);
         }
@@ -301,8 +301,7 @@
 
     &__list {
         width: vw(133);
-        margin: vw(21) auto 0;
-
+        margin: vw(24) vw(26) 0 auto;
         @include mq {
             width: vwt(423);
             margin-top: vwt(44);
@@ -318,7 +317,7 @@
         text-align: right;
         font-size: vw(14);
         padding-right: vw(24);
-        margin-top: vw(4);
+        margin-top: vw(6);
 
         @include mq {
             font-size: vwt(27);
@@ -337,7 +336,7 @@
     &__subscribe-price {
         font-family: "Outfit", serif;
         font-weight: 400;
-        letter-spacing: 0;
+        // letter-spacing: 0;
 
     }
 
@@ -362,7 +361,7 @@
         border: 1px solid $color-contrast;
         line-height: 1;
         text-align: center;
-        letter-spacing: 0;
+        // letter-spacing: 0.02em;
         margin-bottom: vw(13);
 
         @include mq {
@@ -426,6 +425,110 @@
 
     }
 
+
+
+}
+
+.box {
+    &__title {
+        line-height: 1;
+        // letter-spacing: 0;
+        padding: vw(14);
+        background: $color-attention;
+        color: $color-contrast;
+        font-size: vw(18);
+        text-align: center;
+        border-radius: vw(10) vw(10) 0 0;
+
+        &--large {
+            font-size: vw(21);
+            padding: vw(4) vw(7) vw(6);
+            // letter-spacing: 0.09em;
+
+        }
+    }
+
+    &__body {
+        border: 1px solid $color-attention;
+        padding: vw(20);
+        border-radius: 0 0 vw(10) vw(10);
+    }
+}
+.space{
+    margin-left: 5px;
+}
+
+
+
+
+
+.news {
+    background: #fffedd;
+
+    &__container {
+        padding: vw(23) vw(20)vw(16);
+    }
+
+    &__title {
+        color: $color-attention;
+        font-size: vw(21);
+        position: relative;
+        text-align: center;
+        margin-bottom: vw(14);
+
+        &::before,
+        &::after {
+            position: absolute;
+            display: block;
+            background-color: #1e90ff;
+            content: "";
+            height: 2px;
+            width: 27px;
+            top: 50%;
+        }
+
+        &::before {
+            left: 32%;
+            transform: rotate(60deg);
+        }
+
+        &::after {
+            transform: rotate(-60deg);
+            right: 32%;
+        }
+
+
+
+
+    }
+
+    &__body {
+        text-align: center;
+        background: $color-contrast;
+
+        font-size: vw(27);
+        padding: vw(7) vw(9) vw(12) vw(9);
+        // letter-spacing: 0.09em;
+    }
+
+    &__text {
+        font-size: vw(27);
+        line-height: 1;
+        // letter-spacing: 0.09em;
+        color: $color-attention;
+
+        &--large {
+            font-size: vw(42);
+
+        }
+    }
+
+    &__note {
+        font-size: vw(10);
+        margin-top: vw(7);
+        // letter-spacing: 0.09em;
+        text-align: center;
+    }
 
 
 }
