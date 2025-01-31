@@ -1,0 +1,431 @@
+@charset "utf-8";
+@use "./settings/" as *;
+@use "sass:math";
+
+
+//-----------------------------------------------------
+// header
+//-----------------------------------------------------
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: vw(60);
+    background: $color-contrast;
+
+    @include mq {
+        height: vwt(92);
+
+    }
+
+    @include mq(lg) {
+        height: px2Rem(92);
+
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        @include mq {
+            justify-content: space-between;
+            max-width: vwt(1090);
+            padding: 0 vwt(30);
+            margin-inline: auto;
+        }
+
+        @include mq(lg) {
+            max-width: px2Rem(1090);
+            padding: 0 px2Rem(30);
+
+        }
+    }
+
+    &__logo {
+        width: vw(72);
+        margin: 0 vw(6) 0 vw(12);
+
+        @include mq {
+            width: vwt(97);
+            margin: 0;
+            margin-left: vwt(3);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(97);
+            margin-left: px2Rem(3);
+
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: vw(10);
+
+        @include mq {
+            gap: vwt(17);
+        }
+
+        @include mq(lg) {
+            gap: px2Rem(17);
+        }
+    }
+
+    &__button {
+        font-size: vw(12);
+        padding: vw(8) vw(20) vw(8) vw(10);
+        @include l_spacing(40);
+        text-align: left;
+        line-height: 1;
+
+        @include mq {
+            font-size: vwt(21);
+            padding: vwt(12) vwt(33) vwt(12) vwt(24);
+
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(12) px2Rem(33) px2Rem(12) px2Rem(24);
+            font-size: px2Rem(21);
+
+
+        }
+    }
+
+    &__span {
+        font-size: vw(10);
+        margin-left: 10px;
+
+        @include mq {
+            font-size: vwt(18);
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(18);
+
+
+        }
+    }
+}
+
+// //-----------------------------------------------------
+// // レイアウト
+// //-----------------------------------------------------
+
+
+
+//-----------------------------------------------------
+// メインビジュアル
+//-----------------------------------------------------
+.mainvisual {
+    margin-top: vw(60);
+    color: $color-contrast;
+    background: $color-attention;
+
+    @include mq {
+        margin-top: vwt(92);
+    }
+
+    @include mq(lg) {
+        margin-top: px2Rem(92);
+    }
+
+    &__container {
+        padding: 0 0 vw(18);
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        background: url("/assets/image/mainvisual_bg.png") no-repeat vw(4) bottom / vw(209) auto;
+
+        @include mq {
+            padding: 0 vwt(30) vwt(35);
+            width: vwt(1030);
+            margin-inline: auto;
+            background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat left bottom / vwt(486) auto;
+        }
+
+        @include mq(lg) {
+            padding: 0 px2Rem(30) px2Rem(35);
+            width: px2Rem(1030);
+            background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat left bottom / px2Rem(486) auto;
+        }
+    }
+
+    &__title {
+        width: vw(164);
+        position: absolute;
+        left: vw(19);
+        top: vw(23);
+
+        @include mq {
+            width: vwt(541);
+            position: absolute;
+            left: vwt(21);
+            top: 0;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(541);
+            left: px2Rem(21);
+
+        }
+    }
+
+    &__label-wrapper {
+        width: vw(188);
+        padding: vw(25);
+        background: #fca4bf;
+        line-height: 1;
+        box-shadow: 5px 5px 0px 0px rgba(231, 116, 151, 1);
+
+        @include mq {
+            padding: vwt(44) vwt(58);
+            width: vwt(423);
+            margin-left: auto;
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(44) px2Rem(58);
+            width: px2Rem(423);
+        }
+    }
+
+    &__label {
+        display: flex;
+    }
+
+    &__icon {
+        margin-right: vw(10);
+
+        @include mq {
+            margin-right: vwt(26);
+        }
+
+        @include mq(lg) {
+            margin-right: px2Rem(26);
+
+        }
+    }
+
+    &__bg {
+        // line-height: 1;
+        color: $color-attention;
+        background: $color-contrast;
+        font-size: vw(13);
+        padding: vw(5);
+        margin-bottom: vw(7);
+
+        @include mq {
+            font-size: vwt(29);
+            margin-bottom: vwt(20);
+            letter-spacing: -0.013em;
+            padding: vwt(10) 0 vwt(13) vwt(9);
+            width: vwt(105);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(29);
+            padding: px2Rem(10) 0 px2Rem(13) px2Rem(9);
+            width: px2Rem(105);
+
+            margin-bottom: px2Rem(20);
+
+        }
+    }
+
+    &__label-text {
+        font-size: vw(24);
+        // line-height: 1;
+
+        @include mq {
+            font-size: vwt(54);
+
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(54);
+
+
+        }
+    }
+
+    &__price-wrapper {
+        // line-height: 1;
+
+        @include mq {
+            width: auto;
+        }
+
+    }
+
+    &__price {
+        color: $color-warning;
+        font-size: vw(36);
+        // line-height: 1;
+
+        @include mq {
+            font-size: vwt(81);
+
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(81);
+
+        }
+
+        &--large {
+            font-size: vw(76);
+            line-height: 0.6;
+
+            @include mq {
+                font-size: vwt(171);
+
+
+            }
+
+            @include mq(lg) {
+                font-size: px2Rem(171);
+
+            }
+        }
+    }
+
+
+
+
+    &__list {
+        width: vw(133);
+        margin: vw(21) auto 0;
+
+        @include mq {
+            width: vwt(423);
+            margin-top: vwt(44);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(423);
+            margin-top: px2Rem(44);
+        }
+    }
+
+    &__subscribe {
+        text-align: right;
+        font-size: vw(14);
+        padding-right: vw(24);
+        margin-top: vw(4);
+
+        @include mq {
+            font-size: vwt(27);
+            margin-top: vwt(4);
+            padding-right: vwt(62);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(27);
+            margin-top: px2Rem(4);
+            padding-right: px2Rem(62);
+        }
+    }
+
+
+    &__subscribe-price {
+        font-family: "Outfit", serif;
+        font-weight: 400;
+        letter-spacing: 0;
+
+    }
+
+    &__subscribe-month {
+        font-size: vw(9);
+
+        @include mq {
+            font-size: vwt(17);
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(17);
+
+        }
+    }
+
+
+    &__button {
+        font-size: vw(18);
+        padding: vw(7);
+        border: 1px solid $color-contrast;
+        line-height: 1;
+        text-align: center;
+        letter-spacing: 0;
+        margin-bottom: vw(13);
+
+        @include mq {
+
+            font-size: vwt(28);
+            padding: vwt(19);
+            margin-bottom: vwt(21);
+
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(28);
+            padding: px2Rem(19);
+            margin-bottom: px2Rem(21);
+
+
+        }
+    }
+}
+
+// //-----------------------------------------------------
+// // コンポーネント
+// //-----------------------------------------------------
+
+.button {
+    display: block;
+    margin-inline: auto;
+    border-radius: 2em;
+    text-align: center;
+    color: $color-contrast;
+    background-color: $color-success;
+    border: 2px solid transparent;
+    transition: .25s;
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: vw(6);
+        height: vw(6);
+        border-top: 1px solid;
+        border-right: 1px solid;
+        top: 50%;
+        right: .83em;
+        transform: translateY(-50%) rotate(45deg);
+
+        @include mq {
+            width: vwt(11);
+            height: vwt(11);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(11);
+            height: px2Rem(11);
+        }
+    }
+
+    &--attention {
+        background: $color-attention;
+
+    }
+
+
+
+}

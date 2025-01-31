@@ -1,0 +1,159 @@
+@use "sass:math";
+
+//-----------------------------------------------------
+// scss: 変数設定
+//-----------------------------------------------------
+
+// カラー
+$color-normal: #333;
+// $color-pale: #F0F4FF;
+$color-second: #4d2b1b;
+$color-warning: #fffd7a;
+$color-contrast: #fff;
+$color-attention: #fa7da3;
+$color-success: #49c43d;
+$color-emphasis: #50bfff;
+;
+// フォントファミリー
+$font-family: "Noto Sans JP", 'Outfit', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', meiryo, serif;
+// コンテンツ幅の指定
+$sp-full-width: 390; // スマホ用のカンプ幅
+$pc-full-width: 1440; // PC用のカンプ幅
+$pc-content-width: 1030; // PC用のカンプのコンテンツ幅(ガイド線の幅)
+// ブレイクポイントの指定
+$breakpoint-md: 768;
+$breakpoint-lg: $pc-content-width;
+
+// 本番用か否か
+$production: 1; //0の場合はpxで出力本番用の場合は1にする。
+//-----------------------------------------------------
+//  scss: ブレークポイント関数
+//-----------------------------------------------------
+$breakpoints: (
+    "md": "screen and (min-width: #{$breakpoint-md}px)",
+    "lg": "screen and (min-width: #{$breakpoint-lg}px)",
+    ) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+//-----------------------------------------------------
+//  scss: 変換関数群
+//-----------------------------------------------------
+
+// SP用: vwへの変換
+@function vw($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $sp-full-width
+);
+}
+
+// タブレット用: vwへの変換
+@function vwt($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-content-width);
+}
+
+// PC用: pxをremに変換
+@function px2Rem($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px / 16) * 1rem;
+}
+
+//vwtとpx2Rem関数を同時に書き出す
+@mixin responsive-prop($property, $value) {
+    #{$property}: vw($value);
+
+    @include mq {
+        #{$property}: vwt($value);
+    }
+
+    @include mq(lg) {
+        #{$property}: px2Rem($value);
+    }
+}
+
+
+
+// 行間の指定
+// デザインデータの行間反映用
+
+@mixin lineheight($fontsize, $lin) {
+    // $fontsizeの数値の単位はpx
+    line-height: math.div($lin, $fontsize);
+}
+
+// 文字間の指定
+// デザインデータの文字間反映用
+@mixin l_spacing($spacing) {
+    font-feature-settings: "palt";
+    letter-spacing: ($spacing / 1000) + em;
+}
+
+
+
+
+//-----------------------------------------------------
+// base
+//-----------------------------------------------------
+body {
+    color: $color-normal;
+    font-family: $font-family;
+    font-weight: 100;
+    @include lineheight(14, 21);
+    font-size: vw(14);
+    // overflow-x: hidden;
+    @include l_spacing(40);
+    @include responsive-prop(font-size, 16);
+
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:focus,
+    &:hover {
+        opacity: 0.6;
+    }
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.sp-block {
+    display: block;
+
+    @include mq {
+        display: none;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    margin: -1px;
+}
