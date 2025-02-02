@@ -1,8 +1,9 @@
 body {
   color: #333;
   font-family: "Noto Sans JP", "Outfit", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", meiryo, serif;
-  font-weight: 100;
+  line-height: 1.5;
   font-size: 3.5897435897vw;
+  overflow-x: hidden;
   font-size: 4.1025641026vw;
 }
 @media screen and (min-width: 768px) {
@@ -63,12 +64,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .header {
-    height: 8.932038835vw;
+    height: 8.7378640777vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .header {
-    height: 5.75rem;
+    height: 5.625rem;
   }
 }
 .header__container {
@@ -125,17 +126,17 @@ img {
   font-size: 3.0769230769vw;
   padding: 1.7948717949vw 4.6153846154vw 1.7948717949vw 2.5641025641vw;
   letter-spacing: 0.04em;
-  text-align: left;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .header__button {
     font-size: 2.0388349515vw;
-    padding: 1.1650485437vw 3.2038834951vw 1.1650485437vw 2.3300970874vw;
+    padding: 0.6796116505vw 3.3980582524vw 0.6796116505vw 1.8446601942vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .header__button {
-    padding: 0.75rem 2.0625rem 0.75rem 1.5rem;
+    padding: 0.4375rem 2.1875rem 0.4375rem 1.1875rem;
     font-size: 1.3125rem;
   }
 }
@@ -178,7 +179,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .mainvisual__container {
-    padding: 0 2.9126213592vw 3.3980582524vw;
+    padding: 0 2.9126213592vw 0.8737864078vw;
     width: 100vw;
     margin-inline: auto;
     background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat left bottom/47.1844660194vw auto;
@@ -186,7 +187,7 @@ img {
 }
 @media screen and (min-width: 1030px) {
   .mainvisual__container {
-    padding: 0 1.875rem 2.1875rem;
+    padding: 0 1.875rem 0.5625rem;
     width: 64.375rem;
     background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat left bottom/30.375rem auto;
   }
@@ -220,32 +221,19 @@ img {
 }
 @media screen and (min-width: 768px) {
   .mainvisual__label-wrapper {
-    padding: 4.2718446602vw 5.6310679612vw;
+    padding: 4.2718446602vw 0 4.2718446602vw 5.6310679612vw;
     width: 41.067961165vw;
     margin-left: auto;
   }
 }
 @media screen and (min-width: 1030px) {
   .mainvisual__label-wrapper {
-    padding: 2.75rem 3.625rem;
+    padding: 2.75rem 0 2.75rem 3.625rem;
     width: 26.4375rem;
   }
 }
 .mainvisual__label {
   display: flex;
-}
-.mainvisual__icon {
-  margin-right: 2.5641025641vw;
-}
-@media screen and (min-width: 768px) {
-  .mainvisual__icon {
-    margin-right: 2.5242718447vw;
-  }
-}
-@media screen and (min-width: 1030px) {
-  .mainvisual__icon {
-    margin-right: 1.625rem;
-  }
 }
 .mainvisual__bg {
   color: #fa7da3;
@@ -276,21 +264,30 @@ img {
 @media screen and (min-width: 768px) {
   .mainvisual__label-text {
     font-size: 5.2427184466vw;
+    margin-left: 0.2912621359vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .mainvisual__label-text {
     font-size: 3.375rem;
+    margin-left: 0.1875rem;
   }
 }
 @media screen and (min-width: 768px) {
   .mainvisual__price-wrapper {
     width: auto;
+    margin-left: 2.0388349515vw;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .mainvisual__price-wrapper {
+    margin-left: 1.3125rem;
   }
 }
 .mainvisual__price {
   color: #fffd7a;
   font-size: 9.2307692308vw;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .mainvisual__price {
@@ -322,14 +319,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .mainvisual__list {
-    width: 41.067961165vw;
-    margin-top: 4.2718446602vw;
+    width: auto;
+    margin: 4.4660194175vw auto;
   }
 }
 @media screen and (min-width: 1030px) {
   .mainvisual__list {
-    width: 26.4375rem;
-    margin-top: 2.75rem;
+    margin: 2.875rem auto;
   }
 }
 .mainvisual__subscribe {
@@ -341,14 +337,14 @@ img {
 @media screen and (min-width: 768px) {
   .mainvisual__subscribe {
     font-size: 2.6213592233vw;
-    margin-top: 0.3883495146vw;
+    margin-top: 0.2912621359vw;
     padding-right: 6.0194174757vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .mainvisual__subscribe {
     font-size: 1.6875rem;
-    margin-top: 0.25rem;
+    margin-top: 0.1875rem;
     padding-right: 3.875rem;
   }
 }
@@ -501,4 +497,4 @@ img {
   font-size: 2.5641025641vw;
   margin-top: 1.7948717949vw;
   text-align: center;
-}/*# sourceMappingURL=main.css.map */
+}
