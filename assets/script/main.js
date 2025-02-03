@@ -9,7 +9,10 @@ $(function () {
         function initializeSwiper() {
             swiper = new Swiper('.swiper', {
                 spaceBetween: 10,
+                loop: true,
                 slidesPerView: 1.5,
+                centeredSlides: true,
+                // loopAdditionalSlides: 2,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,

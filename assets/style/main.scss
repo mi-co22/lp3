@@ -66,29 +66,29 @@
         gap: vw(10);
 
         @include mq {
-            gap: vwt(17);
+            gap: vwt(25);
         }
 
         @include mq(lg) {
-            gap: px2Rem(17);
+            gap: px2Rem(25);
         }
     }
 
     &__button {
         font-size: vw(12);
-        padding: vw(7) vw(18) vw(7) vw(10);
+        padding: vw(5) vw(18) vw(5) vw(10);
         @include l_spacing(40);
         text-align: center;
         // line-height: 1;
 
         @include mq {
             font-size: vwt(21);
-            padding: vwt(7) vwt(35) vwt(7) vwt(19);
-
+            padding: vwt(7) vwt(35) vwt(7) vwt(20);
+            letter-spacing: 0;
         }
 
         @include mq(lg) {
-            padding: px2Rem(7) px2Rem(35) px2Rem(7) px2Rem(19);
+            padding: px2Rem(7) px2Rem(35) px2Rem(7) px2Rem(20);
             font-size: px2Rem(21);
 
 
@@ -97,7 +97,6 @@
 
     &__span {
         font-size: vw(10);
-        margin-left: vw(2);
 
         @include mq {
             font-size: vwt(18);
@@ -158,8 +157,8 @@
     &__title {
         width: vw(164);
         position: absolute;
-        left: vw(19);
-        top: vw(23);
+        left: vw(20);
+        top: vw(22);
 
         @include mq {
             width: vwt(541);
@@ -177,7 +176,8 @@
 
     &__label-wrapper {
         width: vw(188);
-        padding: vw(25);
+        padding: vw(25) 0 vw(25) vw(28);
+
         background: #fca4bf;
         line-height: 1;
         box-shadow: 5px 5px 0px 0px rgba(231, 116, 151, 1);
@@ -212,17 +212,15 @@
     }
 
     &__bg {
-        // line-height: 1;
         color: $color-attention;
         background: $color-contrast;
         font-size: vw(13);
-        padding: vw(5);
+        padding: vw(4) 0 vw(6) vw(3);
         margin-bottom: vw(7);
 
         @include mq {
             font-size: vwt(29);
             margin-bottom: vwt(20);
-            // letter-spacing: -0.013em;
             padding: vwt(10) 0 vwt(13) vwt(9);
             width: vwt(105);
         }
@@ -256,7 +254,8 @@
     }
 
     &__price-wrapper {
-        // line-height: 1;
+        margin-left: vw(10);
+
 
         @include mq {
             width: auto;
@@ -310,7 +309,7 @@
 
     &__list {
         width: vw(133);
-        margin: vw(24) vw(26) 0 auto;
+        margin: vw(22) vw(26) 0 auto;
 
         @include mq {
             width: auto;
@@ -325,8 +324,8 @@
     &__subscribe {
         text-align: right;
         font-size: vw(14);
-        padding-right: vw(24);
-        margin-top: vw(6);
+        padding-right: vw(25);
+        margin-top: vw(3);
 
         @include mq {
             font-size: vwt(27);
@@ -466,16 +465,16 @@
         }
 
         &--fix {
+            padding-bottom: vw(13);
+
             @include mq {
-                padding: vwt(20)vwt(20) vwt(25);
+                padding: vwt(24)vwt(20) vwt(21);
 
 
             }
 
             @include mq(lg) {
-                padding: px2Rem(20) vwt(20) px2Rem(25);
-
-
+                padding: px2Rem(24) vwt(20) px2Rem(21);
             }
         }
 
@@ -527,11 +526,20 @@
     }
 
     &__text {
+        letter-spacing: -0.04em;
+        font-size: vw(14);
+        line-height: 1.5;
+
         @include mq {
             letter-spacing: 0.004em;
+            font-size: vwt(21);
+
         }
 
-        @include mq(lg) {}
+        @include mq(lg) {
+            font-size: px2Rem(21);
+
+        }
     }
 }
 
@@ -543,6 +551,9 @@
     align-items: center;
     justify-content: center;
     color: $color-attention;
+    font-size: vw(32);
+    @include l_spacing(40);
+    font-weight: 700;
 
     @include mq {
         font-size: vwt(42);
@@ -613,7 +624,7 @@
     background: #fffedd;
 
     &__container {
-        padding: vw(23) vw(20)vw(16);
+        padding: vw(18) vw(20)vw(16);
 
         @include mq {
             padding: vwt(38) vwt(30)vwt(24);
@@ -629,10 +640,13 @@
     &__title {
         color: $color-attention;
         font-size: vw(21);
-        position: relative;
-        text-align: center;
-        // margin-bottom: vw(14);
-        position: relative;
+        // position: relative;
+        // text-align: center;
+        // position: relative;
+        margin-left: vw(16);
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         @include mq {
             font-size: vwt(34);
@@ -647,13 +661,13 @@
 
         &::before,
         &::after {
-            position: absolute;
+            // position: absolute;
             display: block;
             background-color: $color-attention;
             content: "";
             height: vw(2);
             width: vw(27);
-            top: 50%;
+            // top: 50%;
 
             @include mq {
                 height: vwt(4);
@@ -667,7 +681,7 @@
         }
 
         &::before {
-            left: 32%;
+            // left: 50%;
             transform: rotate(60deg);
 
             @include mq {
@@ -677,15 +691,26 @@
 
         &::after {
             transform: rotate(-60deg);
-            right: 32%;
+            // right: 32%;
 
             @include mq {
-                right: 42.8%;
+                // right: 42.8%;
             }
         }
     }
 
+    // &__title-span {
+    //     margin-left: -1px;
+
+    //     @include mq {
+    //         margin-left: 0;
+
+    //     }
+    // }
+
     &__box {
+        margin-top: vw(12);
+
         @include mq {
             margin-top: vwt(17);
             max-width: vwt(550);
@@ -704,7 +729,7 @@
         // background: $color-contrast;
 
         font-size: vw(27);
-        padding: vw(7) vw(9) vw(22) vw(9);
+        padding: vw(7) vw(9) vw(11) vw(9);
 
         // letter-spacing: 0.09em;
         @include mq {
@@ -724,10 +749,11 @@
         line-height: 1;
         // letter-spacing: 0.09em;
         color: $color-attention;
+        margin-left: vw(7);
 
         @include mq {
             font-size: vwt(44);
-
+            margin-left: 0;
         }
 
         @include mq(lg) {
@@ -777,15 +803,15 @@
 
 .cta {
     &__container {
-        padding: vw(14) vw(20)vw(16);
+        padding: vw(14) vw(20)vw(37);
 
         @include mq {
-            padding: vwt(56) vwt(30)vwt(51);
+            padding: vwt(56) vwt(30)vwt(56);
 
         }
 
         @include mq(lg) {
-            padding: px2Rem(56) px2Rem(30)px2Rem(51);
+            padding: px2Rem(56) px2Rem(30)px2Rem(56);
 
         }
     }
@@ -799,7 +825,7 @@
         font-size: vw(17);
         @include l_spacing(100);
         margin-top: vw(30);
-        margin-bottom: vw(12);
+        margin-bottom: vw(10);
         text-align: center;
 
         @include mq {
@@ -826,7 +852,7 @@
     }
 
     &__text-wrapper {
-        margin: 0 vw(8) vw(22);
+        margin-left: vw(1);
 
         @include mq {
             max-width: vwt(576);
@@ -840,7 +866,8 @@
 
     &__text {
         font-size: vw(14);
-        // letter-spacing: 0.12em;
+        margin-bottom: vw(3);
+
 
         @include mq {
             font-size: vwt(23);
@@ -852,6 +879,10 @@
             font-size: px2Rem(23);
             margin-bottom: px2Rem(5);
 
+        }
+
+        &:last-child {
+            margin-bottom: 0;
         }
 
         &--small {
@@ -891,6 +922,7 @@
         margin-bottom: vw(10);
         color: $color-attention;
         text-align: center;
+        margin-left: vw(11);
 
         @include mq {
             font-size: vwt(34);
@@ -957,14 +989,10 @@
     background: $color-bg;
 
     &__container {
-        padding: vw(32) vw(20)vw(16);
+        padding: vw(34) vw(20)vw(16);
 
         @include mq {
-
             padding: vwt(48) vwt(30) vwt(60);
-
-
-
         }
 
         @include mq(lg) {
@@ -1019,7 +1047,7 @@
     }
 
     &__box-wrapper {
-        margin-top: vw(23);
+        margin-top: vw(21);
 
         @include mq {
             max-width: vwt(780);
@@ -1052,18 +1080,20 @@
 
     &__2column {
         display: flex;
+        margin: vw(12) auto 0;
+        gap: vw(22);
 
         @include mq {
             max-width: vwt(505);
-            margin: vwt(22) auto 0;
+            margin: vwt(24) auto vwt(6);
             gap: vwt(41);
 
         }
 
         @include mq(lg) {
             max-width: px2Rem(505);
-            margin: px2Rem(22) auto 0;
             gap: px2Rem(41);
+            margin: px2Rem(24) auto px2Rem(6);
 
 
         }
@@ -1089,6 +1119,8 @@
     }
 
     &__item {
+        width: vw(143);
+
         @include mq {
             width: vwt(232);
         }
@@ -1137,7 +1169,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
+        width: vw(143);
+        border: vw(1) solid #666;
+        height: vw(85);
 
 
         @include mq {
@@ -1159,6 +1193,8 @@
     }
 
     &__image {
+        width: vw(71);
+
         @include mq {
             width: vwt(116);
             margin-left: vwt(6);
@@ -1173,15 +1209,19 @@
 
     &__number {
         text-align: center;
+        margin: vw(5) auto 0;
+        font-size: vw(14);
 
         @include mq {
 
             margin: vwt(8) auto 0;
+            font-size: vwt(21);
 
         }
 
         @include mq(lg) {
             margin: px2Rem(8) auto 0;
+            font-size: px2Rem(21);
 
 
 
@@ -1222,6 +1262,9 @@
         }
     }
 
+    // &__box-title{
+
+    // }
     &__parts {
         display: block;
 
@@ -1243,13 +1286,14 @@
     }
 
     &__body {
+        padding: vw(14) vw(19) vw(16);
 
         @include mq {
-            padding-bottom: vwt(30);
+            padding: vwt(24) vwt(40) vwt(30);
         }
 
         @include mq(lg) {
-            padding-bottom: px2Rem(30);
+            padding: px2Rem(24) px2Rem(40) px2Rem(30);
 
 
         }
@@ -1415,7 +1459,7 @@
     background: $color-bg;
 
     &__container {
-        padding: vw(32) vw(20)vw(16);
+        padding: vw(32) 0 vw(16);
 
         @include mq {
 
