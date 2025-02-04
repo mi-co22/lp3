@@ -1,10 +1,14 @@
+@charset "UTF-8";
 body {
   color: #333;
-  font-family: "Noto Sans JP", "Outfit", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", meiryo, serif;
+  font-family: "Noto Sans JP", "Outfit", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", meiryo, sans-serif;
+  /* プロポーショナル数字を適用 */
   line-height: 1.5;
   font-size: 3.5897435897vw;
   overflow-x: hidden;
   font-size: 4.1025641026vw;
+  font-variant-numeric: tabular-nums;
+  /* 等幅数字に統一 */
 }
 @media screen and (min-width: 768px) {
   body {
@@ -431,7 +435,7 @@ img {
   }
 }
 .mainvisual__title {
-  width: 42.0512820513vw;
+  width: 42.5641025641vw;
   position: absolute;
   left: 5.1282051282vw;
   top: 5.641025641vw;
@@ -473,11 +477,14 @@ img {
 .mainvisual__label {
   display: flex;
 }
+.mainvisual__icon {
+  font-weight: 700;
+}
 .mainvisual__bg {
   color: #fa7da3;
   background: #fff;
   font-size: 3.3333333333vw;
-  padding: 1.0256410256vw 0 1.5384615385vw 0.7692307692vw;
+  padding: 1.0256410256vw 0 1.0256410256vw 0.7692307692vw;
   margin-bottom: 1.7948717949vw;
   width: 11.7948717949vw;
 }
@@ -544,6 +551,8 @@ img {
 .mainvisual__price--large {
   font-size: 19.4871794872vw;
   line-height: 0.62;
+  font-variant-numeric: tabular-nums;
+  /* 等幅数字に統一 */
 }
 @media screen and (min-width: 768px) {
   .mainvisual__price--large {
@@ -764,7 +773,7 @@ img {
 }
 .news__text--large {
   font-size: 10.7692307692vw;
-  font-weight: 700;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .news__text--large {
@@ -833,6 +842,7 @@ img {
   margin-top: 7.9487179487vw;
   margin-bottom: 2.8205128205vw;
   text-align: center;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .cta__heading {
@@ -920,6 +930,7 @@ img {
   color: #fa7da3;
   text-align: center;
   margin-left: 2.8205128205vw;
+  font-weight: 600;
 }
 @media screen and (min-width: 768px) {
   .cv__title {
@@ -950,20 +961,21 @@ img {
 }
 .cv__button {
   font-size: 5.3846153846vw;
-  padding: 2.5641025641vw 17.4358974359vw;
+  padding: 2.5641025641vw;
   line-height: 1.3333333333;
   letter-spacing: 0.1em;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .cv__button {
     font-size: 3.3009708738vw;
-    padding: 1.6504854369vw 10.5825242718vw 1.8446601942vw 10.7766990291vw;
+    padding: 1.6504854369vw 1.6504854369vw 1.8446601942vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .cv__button {
     font-size: 2.125rem;
-    padding: 1.0625rem 6.8125rem 1.1875rem 6.9375rem;
+    padding: 1.0625rem 1.0625rem 1.1875rem;
   }
 }
 .cv__button::after {
@@ -988,7 +1000,9 @@ img {
     border-right: 0.125rem solid;
   }
 }
-
+.cv__button-space {
+  display: inline-block;
+}
 .feature {
   background: #fdf0f5;
 }
@@ -1096,22 +1110,19 @@ img {
 }
 .feature__6column {
   display: flex;
-  max-width: 83.0769230769vw;
-  margin: 6.1538461538vw auto 0;
+  margin: 6.1538461538vw 0 0;
   gap: 4.1025641026vw 3.0769230769vw;
   flex-wrap: wrap;
 }
 @media screen and (min-width: 768px) {
   .feature__6column {
-    max-width: 64.0776699029vw;
-    margin: 2.3300970874vw auto 0;
+    margin: 2.3300970874vw 1.7475728155vw 0;
     gap: 1.1650485437vw;
   }
 }
 @media screen and (min-width: 1030px) {
   .feature__6column {
-    max-width: 41.25rem;
-    margin: 1.5rem auto 0;
+    margin: 1.5rem 1.125rem 0;
     gap: 0.75rem;
   }
 }
@@ -1300,7 +1311,7 @@ img {
   }
 }
 .feature__body--fix {
-  padding: 3.5897435897vw 3.0769230769vw 3.8461538462vw;
+  padding: 3.5897435897vw 2.8205128205vw 3.8461538462vw;
 }
 @media screen and (min-width: 768px) {
   .feature__body--fix {
@@ -1554,6 +1565,7 @@ img {
 @media screen and (min-width: 768px) {
   .voice__box {
     width: 33.9805825243vw;
+    height: auto;
   }
 }
 @media screen and (min-width: 1030px) {
@@ -1602,6 +1614,15 @@ img {
 @media screen and (min-width: 1030px) {
   .voice__profile {
     font-size: 1rem;
+  }
+}
+.voice__space {
+  margin-left: 0.29em;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .voice__space {
+    margin-left: 0.18em;
   }
 }
 .voice__image {

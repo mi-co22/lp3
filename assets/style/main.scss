@@ -414,7 +414,7 @@
     }
 
     &__title {
-        width: vw(164);
+        width: vw(166);
         position: absolute;
         left: vw(20);
         top: vw(22);
@@ -431,6 +431,10 @@
             left: px2Rem(21);
         }
     }
+
+    // &__title-image {
+    //     width: vw(166);
+    // }
 
     &__label-wrapper {
         width: vw(188);
@@ -455,13 +459,18 @@
         display: flex;
     }
 
+    &__icon {
+        font-weight: 700;
+    }
+
     &__bg {
         color: $color-attention;
         background: $color-contrast;
         font-size: vw(13);
-        padding: vw(4) 0 vw(6) vw(3);
+        padding: vw(4) 0 vw(4) vw(3);
         margin-bottom: vw(7);
         width: vw(46);
+        // @include lineheight(13, 60);
 
         @include mq {
             font-size: vwt(29);
@@ -521,6 +530,8 @@
         &--large {
             font-size: vw(76);
             line-height: 0.62;
+            font-variant-numeric: tabular-nums;
+            /* 等幅数字に統一 */
 
             @include mq {
                 font-size: vwt(171);
@@ -741,7 +752,7 @@
 
         &--large {
             font-size: vw(42);
-            font-weight: 700;
+            font-weight: 600;
 
             @include mq {
                 font-size: vwt(68);
@@ -816,6 +827,7 @@
         margin-top: vw(31);
         margin-bottom: vw(11);
         text-align: center;
+        font-weight: 600;
 
         @include mq {
             font-size: vwt(28);
@@ -902,6 +914,7 @@
         color: $color-attention;
         text-align: center;
         margin-left: vw(11);
+        font-weight: 600;
 
         @include mq {
             font-size: vwt(34);
@@ -936,18 +949,19 @@
 
     &__button {
         font-size: vw(21);
-        padding: vw(10) vw(68);
+        padding: vw(10);
         @include lineheight(21, 28);
         @include l_spacing(100);
+        font-weight: 700;
 
         @include mq {
             font-size: vwt(34);
-            padding: vwt(17) vwt(109) vwt(19) vwt(111);
+            padding: vwt(17) vwt(17) vwt(19);
         }
 
         @include mq(lg) {
             font-size: px2Rem(34);
-            padding: px2Rem(17) px2Rem(109) px2Rem(19) px2Rem(111);
+            padding: px2Rem(17) px2Rem(17) px2Rem(19);
         }
 
         &::after {
@@ -969,6 +983,17 @@
                 border-top: px2Rem(2) solid;
                 border-right: px2Rem(2) solid;
             }
+        }
+
+    }
+
+    &__button-space {
+        // margin-left: 0.29em;
+        display: inline-block;
+
+        @include mq {
+            // margin-left: 0.18em;
+
         }
 
     }
@@ -1079,20 +1104,20 @@
 
     &__6column {
         display: flex;
-        max-width: vw(324);
-        margin: vw(24) auto 0;
+        // max-width: vw(325);
+        margin: vw(24) 0 0;
         gap: vw(16) vw(12);
         flex-wrap: wrap;
 
         @include mq {
-            max-width: vwt(660);
-            margin: vwt(24) auto 0;
+            // max-width: vwt(660);
+            margin: vwt(24) vwt(18) 0;
             gap: vwt(12);
         }
 
         @include mq(lg) {
-            max-width: px2Rem(660);
-            margin: px2Rem(24) auto 0;
+            // max-width: px2Rem(660);
+            margin: px2Rem(24) px2Rem(18) 0;
             gap: px2Rem(12);
         }
     }
@@ -1280,7 +1305,7 @@
         }
 
         &--fix {
-            padding: vw(14) vw(12) vw(15);
+            padding: vw(14) vw(11) vw(15);
 
             @include mq {
                 padding: vwt(24) vwt(40) vwt(30);
@@ -1551,10 +1576,11 @@
     }
 
     &__box {
-        // width: vw(310) !important;
+        // height: vw(187);
 
         @include mq {
             width: vwt(350);
+            height: auto;
         }
 
         @include mq(lg) {
@@ -1608,6 +1634,17 @@
 
 
         }
+    }
+
+    &__space {
+        margin-left: 0.29em;
+        display: inline-block;
+
+        @include mq {
+            margin-left: 0.18em;
+
+        }
+
     }
 
     &__image {

@@ -16,7 +16,7 @@ $color-emphasis: #50bfff;
 $color-bg: #fdf0f5;
 
 // フォントファミリー
-$font-family: "Noto Sans JP", 'Outfit', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', meiryo, serif;
+$font-family: "Noto Sans JP", 'Outfit', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', meiryo, sans-serif;
 // コンテンツ幅の指定
 $sp-full-width: 390; // スマホ用のカンプ幅
 $pc-full-width: 1440; // PC用のカンプ幅
@@ -112,13 +112,13 @@ $breakpoints: (
 body {
     color: $color-normal;
     font-family: $font-family;
-    // font-weight: 100;
+    /* プロポーショナル数字を適用 */
     @include lineheight(14, 21);
     font-size: vw(14);
     overflow-x: hidden;
-    // @include l_spacing(40);
     @include responsive-prop(font-size, 16);
-
+    font-variant-numeric: tabular-nums;
+    /* 等幅数字に統一 */
 }
 
 a {
