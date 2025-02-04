@@ -235,6 +235,381 @@
     }
 }
 
+//-----------------------------------------------------
+// ヘッダー
+//-----------------------------------------------------
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    height: vw(60);
+    background: $color-contrast;
+
+    @include mq {
+        height: vwt(92);
+
+    }
+
+    @include mq(lg) {
+        height: px2Rem(92);
+
+    }
+
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        @include mq {
+            justify-content: space-between;
+            max-width: vwt(1090);
+            padding: 0 vwt(30);
+            margin-inline: auto;
+        }
+
+        @include mq(lg) {
+            max-width: px2Rem(1090);
+            padding: 0 px2Rem(30);
+
+        }
+    }
+
+    &__logo {
+        width: vw(72);
+        margin: 0 vw(6) 0 vw(12);
+
+        @include mq {
+            width: vwt(97);
+            margin: 0;
+            margin-left: vwt(3);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(97);
+            margin-left: px2Rem(3);
+
+        }
+    }
+
+    &__list {
+        display: flex;
+        gap: vw(10);
+
+        @include mq {
+            gap: vwt(20);
+            margin-top: vwt(-3);
+
+        }
+
+        @include mq(lg) {
+            gap: px2Rem(20);
+            margin-top: px2Rem(-3);
+
+        }
+    }
+
+    &__button {
+        font-size: vw(12);
+        padding: vw(7) vw(18) vw(8) vw(10);
+        @include l_spacing(40);
+        text-align: center;
+        line-height: 1;
+
+        @include mq {
+            font-size: vwt(21);
+            padding: vwt(12) vwt(35) vwt(14) vwt(23);
+            letter-spacing: 0;
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(12) px2Rem(35) px2Rem(14) px2Rem(23);
+            font-size: px2Rem(21);
+        }
+    }
+
+    &__span {
+        font-size: vw(10);
+
+        @include mq {
+            font-size: vwt(18);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(18);
+        }
+    }
+}
+
+//-----------------------------------------------------
+// フッター
+//-----------------------------------------------------
+.footer {
+    background: $color-attention;
+
+    &__container {
+        padding: vw(13);
+
+        @include mq {
+            padding: vwt(27) vwt(27) vwt(27)vwt(30);
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(27) px2Rem(27) px2Rem(27)px2Rem(30);
+
+        }
+    }
+
+    &__logo {
+        width: vw(72);
+
+        margin-inline: auto;
+
+        @include mq {
+            width: vwt(145);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(145);
+        }
+    }
+}
+
+// -----------------------------------------------------
+// メインビジュアル
+// -----------------------------------------------------
+.mainvisual {
+    margin-top: vw(60);
+    color: $color-contrast;
+    background: $color-attention;
+
+    @include mq {
+        margin-top: vwt(92);
+    }
+
+    @include mq(lg) {
+        margin-top: px2Rem(92);
+    }
+
+    &__container {
+        padding: 0 0 vw(18);
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        background: url("/assets/image/mainvisual_bg.png") no-repeat vw(4) bottom / vw(209) auto;
+
+        @include mq {
+            padding: 0 vwt(30) vwt(10);
+            width: vwt(1030);
+            margin-inline: auto;
+            background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat vwt(1) bottom / vwt(486) auto;
+        }
+
+        @include mq(lg) {
+            padding: 0 px2Rem(30) px2Rem(10);
+            width: px2Rem(1030);
+            background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat px2Rem(1) bottom / px2Rem(486) auto;
+        }
+    }
+
+    &__title {
+        width: vw(164);
+        position: absolute;
+        left: vw(20);
+        top: vw(22);
+
+        @include mq {
+            width: vwt(541);
+            position: absolute;
+            left: vwt(21);
+            top: 0;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(541);
+            left: px2Rem(21);
+        }
+    }
+
+    &__label-wrapper {
+        width: vw(188);
+        padding: vw(25) 0 vw(23) vw(28);
+        background: #fca4bf;
+        line-height: 1;
+        box-shadow: 5px 5px 0px 0px rgba(231, 116, 151, 1);
+
+        @include mq {
+            padding: vwt(44) 0 vwt(44) vwt(58);
+            width: vwt(423);
+            margin-left: auto;
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(44) 0 px2Rem(44) px2Rem(58);
+            width: px2Rem(423);
+        }
+    }
+
+    &__label {
+        display: flex;
+    }
+
+    &__bg {
+        color: $color-attention;
+        background: $color-contrast;
+        font-size: vw(13);
+        padding: vw(4) 0 vw(6) vw(3);
+        margin-bottom: vw(7);
+        width: vw(46);
+
+        @include mq {
+            font-size: vwt(29);
+            margin-bottom: vwt(20);
+            padding: vwt(10) 0 vwt(13) vwt(9);
+            width: vwt(105);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(29);
+            padding: px2Rem(10) 0 px2Rem(13) px2Rem(9);
+            width: px2Rem(105);
+            margin-bottom: px2Rem(20);
+        }
+    }
+
+    &__label-text {
+        font-size: vw(24);
+
+        @include mq {
+            font-size: vwt(54);
+            margin-left: vwt(3);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(54);
+            margin-left: px2Rem(3);
+        }
+    }
+
+    &__price-wrapper {
+        margin-left: vw(10);
+
+        @include mq {
+            width: auto;
+            margin-left: vwt(21);
+        }
+
+        @include mq(lg) {
+            margin-left: px2Rem(21);
+        }
+    }
+
+    &__price {
+        color: $color-warning;
+        font-size: vw(36);
+        font-weight: 700;
+
+        @include mq {
+            font-size: vwt(81);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(81);
+        }
+
+        &--large {
+            font-size: vw(76);
+            line-height: 0.62;
+
+            @include mq {
+                font-size: vwt(171);
+            }
+
+            @include mq(lg) {
+                font-size: px2Rem(171);
+            }
+        }
+    }
+
+    &__list {
+        width: vw(133);
+        margin: vw(21) vw(26) 0 auto;
+
+        @include mq {
+            width: auto;
+            margin: vwt(46) auto;
+        }
+
+        @include mq(lg) {
+            margin: px2Rem(46) auto;
+        }
+    }
+
+    &__subscribe {
+        text-align: right;
+        font-size: vw(14);
+        padding-right: vw(25);
+        margin-top: vw(5);
+
+        @include mq {
+            font-size: vwt(27);
+            margin-top: vwt(1);
+            padding-right: vwt(62);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(27);
+            margin-top: px2Rem(1);
+            padding-right: px2Rem(62);
+        }
+    }
+
+
+    &__subscribe-price {
+        font-family: "Outfit", serif;
+        font-weight: 400;
+    }
+
+    &__subscribe-month {
+        font-size: vw(9);
+
+        @include mq {
+            font-size: vwt(17);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(17);
+        }
+    }
+
+
+    &__button {
+        font-size: vw(18);
+        padding: vw(7);
+        border: 1px solid $color-contrast;
+        line-height: 1;
+        text-align: center;
+        margin-bottom: vw(13);
+
+        @include mq {
+            letter-spacing: -0.05em;
+            font-size: vwt(28);
+            padding: vwt(19);
+            margin-bottom: vwt(21);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(28);
+            padding: px2Rem(19);
+            margin-bottom: px2Rem(21);
+        }
+    }
+}
+
+//-----------------------------------------------------
+// レイアウト
+//-----------------------------------------------------
 .news {
     background: #fffedd;
 
@@ -414,6 +789,19 @@
 
         @include mq(lg) {
             padding: px2Rem(56) px2Rem(30)px2Rem(56);
+        }
+
+        &--fix {
+            padding: vw(28) vw(20)vw(43);
+
+
+            @include mq {
+                padding: vwt(56) vwt(30)vwt(65);
+            }
+
+            @include mq(lg) {
+                padding: px2Rem(56) px2Rem(30)px2Rem(65);
+            }
         }
     }
 
@@ -907,7 +1295,7 @@
 
 .course {
     &__container {
-        padding: vw(26) vw(20)vw(16);
+        padding: vw(26) vw(20)vw(20);
 
         @include mq {
             padding: vwt(54) vwt(30) vwt(60);
@@ -1106,590 +1494,220 @@
     }
 }
 
-// .voice {
-//     background: $color-bg;
-
-//     &__container {
-//         padding: vw(32) 0 vw(16);
-
-//         @include mq {
-
-//             padding: vwt(39) vwt(30) vwt(60);
-
-
-
-//         }
-
-//         @include mq(lg) {
-
-
-//             padding: px2Rem(39) px2Rem(30) px2Rem(60);
-
-
-
-//         }
-
-//     }
-
-//     // &__heading {
-//     //     font-size: vw(18);
-//     //     color: $color-second;
-//     //     text-align: center;
-//     // }
-
-//     &__title {
-//         margin-left: 0;
-
-
-
-//         &::before {
-
-//             @include mq {
-//                 margin-right: vwt(22);
-
-//             }
-
-//             @include mq(lg) {
-//                 margin-right: px2Rem(22);
-
-//             }
-//         }
-
-//         &::after {
-
-
-//             @include mq {
-//                 margin-left: vwt(25);
-
-//             }
-
-//             @include mq(lg) {
-//                 margin-left: px2Rem(25);
-
-//             }
-//         }
-
-
-//     }
-
-
-
-//     &__box-wrapper {
-
-
-//         @include mq {
-//             max-width: vwt(960);
-//             margin: vwt(36) auto 0;
-
-
-//         }
-
-//         @include mq(lg) {
-//             max-width: px2Rem(960);
-//             margin: px2Rem(36) auto 0;
-
-
-//         }
-//     }
-
-//     &__box {
-//         @include mq {
-//             width: vwt(350);
-//         }
-
-//         @include mq(lg) {
-//             width: px2Rem(350);
-//         }
-
-
-//     }
-
-
-//     &__body {
-//         @include mq {
-//             padding: vwt(16) vwt(18) vwt(13);
-//         }
-
-//         @include mq(lg) {
-//             padding: px2Rem(16) px2Rem(18) px2Rem(13);
-//         }
-//     }
-
-
-
-
-//     &__wrapper {
-//         display: flex;
-//     }
-
-//     &__right {
-//         @include mq {
-//             margin-left: vwt(15);
-//         }
-
-//         @include mq(lg) {
-//             margin-left: px2Rem(15);
-
-
-
-//         }
-//     }
-
-//     &__profile {
-//         color: $color-attention;
-//         line-height: 1.5;
-
-//         @include mq {
-//             font-size: vwt(16);
-//         }
-
-//         @include mq(lg) {
-//             font-size: px2Rem(16);
-
-
-//         }
-//     }
-
-//     &__image {
-//         @include mq {
-//             width: vwt(86);
-//             // margin-left: vwt(6);
-//         }
-
-//         @include mq(lg) {
-//             width: px2Rem(86);
-//             // margin-left: px2Rem(6);
-
-//         }
-//     }
-
-//     &__text {
-//         line-height: 1.5;
-
-//         @include mq {
-//             font-size: vwt(14);
-//             margin-top: vwt(6);
-//         }
-
-//         @include mq(lg) {
-//             font-size: px2Rem(14);
-//             margin-top: px2Rem(6);
-
-
-//         }
-//     }
-
-//     &__box {
-//         @include mq {
-//             width: vwt(310);
-//         }
-
-//         @include mq(lg) {
-//             width: px2Rem(310);
-
-
-//         }
-//     }
-
-//     &__box-title {
-//         @include mq {
-//             font-size: vwt(18);
-//             padding: vwt(13);
-
-//         }
-
-//         @include mq(lg) {
-//             font-size: px2Rem(18);
-//             padding: px2Rem(13);
-//         }
-
-//     }
-// }
-
-// .slider {
-//     &__pagination {
-//         position: static;
-//         display: flex;
-//         flex-wrap: wrap;
-//         gap: 1.2rem 0.8rem;
-//         justify-content: center;
-//         margin-top: vw(18);
-//         text-align: center;
-
-//         @include mq {
-//             margin-top: vwt(23);
-//         }
-
-//         @include mq(lg) {
-//             margin-top: px2Rem(23);
-
-
-//         }
-//     }
-// }
-
-
-// .swiper-wrapper {
-
-//     @include mq {
-//         gap: vwt(15);
-//     }
-
-//     @include mq(lg) {
-//         gap: px2Rem(15);
-
-
-
-//     }
-// }
-
-
-
-// @media screen and (max-width: 768px) {
-//     // .swiper-wrapper {
-//     //     flex-direction: row;
-//     //     row-gap: normal;
-//     // }
-
-//     .swiper-pagination {
-//         display: block;
-//     }
-// }
-
-//-----------------------------------------------------
-// header
-//-----------------------------------------------------
-
-.header {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    height: vw(60);
-    background: $color-contrast;
-
-    @include mq {
-        height: vwt(92);
-
-    }
-
-    @include mq(lg) {
-        height: px2Rem(92);
-
-    }
+.voice {
+    background: $color-bg;
 
     &__container {
+        padding: vw(27) 0 vw(19);
+
+        @include mq {
+            padding: vwt(39) vwt(30) vwt(83);
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(39) px2Rem(30) px2Rem(83);
+        }
+
+    }
+
+    &__title {
+        &::before {
+            margin-right: vw(14);
+
+            @include mq {
+                margin-right: vwt(22);
+            }
+
+            @include mq(lg) {
+                margin-right: px2Rem(22);
+            }
+        }
+
+        &::after {
+            margin-left: vw(15);
+
+            @include mq {
+                margin-left: vwt(25);
+            }
+
+            @include mq(lg) {
+                margin-left: px2Rem(25);
+            }
+        }
+    }
+
+    &__box-wrapper {
+        margin: vw(19)auto 0;
+
+        @include mq {
+            max-width: vwt(960);
+            margin: vwt(36) auto 0;
+        }
+
+        @include mq(lg) {
+            max-width: px2Rem(960);
+            margin: px2Rem(36) auto 0;
+        }
+    }
+
+    &__box {
+        // width: vw(310) !important;
+
+        @include mq {
+            width: vwt(350);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(350);
+        }
+    }
+
+
+    &__body {
+
+        padding: vw(16) vw(19) vw(11);
+
+        @include mq {
+            padding: vwt(16) vwt(18) vwt(13);
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(16) px2Rem(18) px2Rem(13);
+        }
+    }
+
+
+
+
+    &__wrapper {
         display: flex;
-        align-items: center;
-        height: 100%;
+    }
+
+    &__right {
+        margin-left: vw(15);
 
         @include mq {
-            justify-content: space-between;
-            max-width: vwt(1090);
-            padding: 0 vwt(30);
-            margin-inline: auto;
+            margin-left: vwt(15);
         }
 
         @include mq(lg) {
-            max-width: px2Rem(1090);
-            padding: 0 px2Rem(30);
+            margin-left: px2Rem(15);
+        }
+    }
+
+    &__profile {
+        color: $color-attention;
+        line-height: 1.5;
+
+        @include mq {
+            font-size: vwt(16);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(16);
+
 
         }
     }
 
-    &__logo {
-        width: vw(72);
-        margin: 0 vw(6) 0 vw(12);
+    &__image {
+        width: vw(86);
 
         @include mq {
-            width: vwt(97);
-            margin: 0;
-            margin-left: vwt(3);
+            width: vwt(86);
         }
 
         @include mq(lg) {
-            width: px2Rem(97);
-            margin-left: px2Rem(3);
+            width: px2Rem(86);
 
         }
     }
 
-    &__list {
-        display: flex;
-        gap: vw(10);
+    &__text {
+        line-height: 1.5;
+        font-size: vw(14);
+        margin-top: vw(6);
 
         @include mq {
-            gap: vwt(20);
-            margin-top: vwt(-3);
-
+            font-size: vwt(14);
+            margin-top: vwt(6);
         }
 
         @include mq(lg) {
-            gap: px2Rem(20);
-            margin-top: px2Rem(-3);
+            font-size: px2Rem(14);
+            margin-top: px2Rem(6);
+
 
         }
     }
 
-    &__button {
-        font-size: vw(12);
-        padding: vw(7) vw(18) vw(8) vw(10);
-        @include l_spacing(40);
-        text-align: center;
-        line-height: 1;
+    &__box {
+        width: vw(310);
 
         @include mq {
-            font-size: vwt(21);
-            padding: vwt(12) vwt(35) vwt(14) vwt(23);
-            letter-spacing: 0;
+            width: vwt(310);
         }
 
         @include mq(lg) {
-            padding: px2Rem(12) px2Rem(35) px2Rem(14) px2Rem(23);
-            font-size: px2Rem(21);
+            width: px2Rem(310);
+
+
         }
     }
 
-    &__span {
-        font-size: vw(10);
+    &__box-title {
+        padding: vw(13) vw(13) vw(13) vw(20);
 
         @include mq {
             font-size: vwt(18);
+            padding: vwt(13);
+
         }
 
         @include mq(lg) {
             font-size: px2Rem(18);
+            padding: px2Rem(13);
         }
+
     }
 }
 
-// -----------------------------------------------------
-// メインビジュアル
-// -----------------------------------------------------
-.mainvisual {
-    margin-top: vw(60);
-    color: $color-contrast;
-    background: $color-attention;
+.slider {
+    &__pagination {
+        position: static;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: vw(7);
+        margin-top: vw(20);
+    }
+}
+
+
+.swiper-wrapper {
 
     @include mq {
-        margin-top: vwt(92);
+        gap: vwt(15);
     }
 
     @include mq(lg) {
-        margin-top: px2Rem(92);
+        gap: px2Rem(15);
+    }
+}
+
+.swiper-pagination {
+    @include mq {
+        display: none;
     }
 
-    &__container {
-        padding: 0 0 vw(18);
-        display: flex;
-        justify-content: flex-end;
-        position: relative;
-        background: url("/assets/image/mainvisual_bg.png") no-repeat vw(4) bottom / vw(209) auto;
+}
 
-        @include mq {
-            padding: 0 vwt(30) vwt(10);
-            width: vwt(1030);
-            margin-inline: auto;
-            background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat vwt(1) bottom / vwt(486) auto;
-        }
+.swiper-pagination-bullet {
+    width: vw(15);
+    height: vw(15);
+    background: #ffd2d2;
+}
 
-        @include mq(lg) {
-            padding: 0 px2Rem(30) px2Rem(10);
-            width: px2Rem(1030);
-            background: #fa7da3 url(/assets/image/mainvisual_bg.png) no-repeat px2Rem(1) bottom / px2Rem(486) auto;
-        }
-    }
-
-    &__title {
-        width: vw(164);
-        position: absolute;
-        left: vw(20);
-        top: vw(22);
-
-        @include mq {
-            width: vwt(541);
-            position: absolute;
-            left: vwt(21);
-            top: 0;
-        }
-
-        @include mq(lg) {
-            width: px2Rem(541);
-            left: px2Rem(21);
-        }
-    }
-
-    &__label-wrapper {
-        width: vw(188);
-        padding: vw(25) 0 vw(23) vw(28);
-        background: #fca4bf;
-        line-height: 1;
-        box-shadow: 5px 5px 0px 0px rgba(231, 116, 151, 1);
-
-        @include mq {
-            padding: vwt(44) 0 vwt(44) vwt(58);
-            width: vwt(423);
-            margin-left: auto;
-        }
-
-        @include mq(lg) {
-            padding: px2Rem(44) 0 px2Rem(44) px2Rem(58);
-            width: px2Rem(423);
-        }
-    }
-
-    &__label {
-        display: flex;
-    }
-
-    &__bg {
-        color: $color-attention;
-        background: $color-contrast;
-        font-size: vw(13);
-        padding: vw(4) 0 vw(6) vw(3);
-        margin-bottom: vw(7);
-        width: vw(46);
-
-        @include mq {
-            font-size: vwt(29);
-            margin-bottom: vwt(20);
-            padding: vwt(10) 0 vwt(13) vwt(9);
-            width: vwt(105);
-        }
-
-        @include mq(lg) {
-            font-size: px2Rem(29);
-            padding: px2Rem(10) 0 px2Rem(13) px2Rem(9);
-            width: px2Rem(105);
-            margin-bottom: px2Rem(20);
-        }
-    }
-
-    &__label-text {
-        font-size: vw(24);
-
-        @include mq {
-            font-size: vwt(54);
-            margin-left: vwt(3);
-        }
-
-        @include mq(lg) {
-            font-size: px2Rem(54);
-            margin-left: px2Rem(3);
-        }
-    }
-
-    &__price-wrapper {
-        margin-left: vw(10);
-
-        @include mq {
-            width: auto;
-            margin-left: vwt(21);
-        }
-
-        @include mq(lg) {
-            margin-left: px2Rem(21);
-        }
-    }
-
-    &__price {
-        color: $color-warning;
-        font-size: vw(36);
-        font-weight: 700;
-
-        @include mq {
-            font-size: vwt(81);
-        }
-
-        @include mq(lg) {
-            font-size: px2Rem(81);
-        }
-
-        &--large {
-            font-size: vw(76);
-            line-height: 0.62;
-
-            @include mq {
-                font-size: vwt(171);
-            }
-
-            @include mq(lg) {
-                font-size: px2Rem(171);
-            }
-        }
-    }
-
-    &__list {
-        width: vw(133);
-        margin: vw(21) vw(26) 0 auto;
-
-        @include mq {
-            width: auto;
-            margin: vwt(46) auto;
-        }
-
-        @include mq(lg) {
-            margin: px2Rem(46) auto;
-        }
-    }
-
-    &__subscribe {
-        text-align: right;
-        font-size: vw(14);
-        padding-right: vw(25);
-        margin-top: vw(5);
-
-        @include mq {
-            font-size: vwt(27);
-            margin-top: vwt(1);
-            padding-right: vwt(62);
-        }
-
-        @include mq(lg) {
-            font-size: px2Rem(27);
-            margin-top: px2Rem(1);
-            padding-right: px2Rem(62);
-        }
-    }
-
-
-    &__subscribe-price {
-        font-family: "Outfit", serif;
-        font-weight: 400;
-    }
-
-    &__subscribe-month {
-        font-size: vw(9);
-
-        @include mq {
-            font-size: vwt(17);
-        }
-
-        @include mq(lg) {
-            font-size: px2Rem(17);
-        }
-    }
-
-
-    &__button {
-        font-size: vw(18);
-        padding: vw(7);
-        border: 1px solid $color-contrast;
-        line-height: 1;
-        text-align: center;
-        margin-bottom: vw(13);
-
-        @include mq {
-            letter-spacing: -0.05em;
-            font-size: vwt(28);
-            padding: vwt(19);
-            margin-bottom: vwt(21);
-        }
-
-        @include mq(lg) {
-            font-size: px2Rem(28);
-            padding: px2Rem(19);
-            margin-bottom: px2Rem(21);
-        }
-    }
+.swiper-pagination-bullet-active {
+    background: $color-attention
 }

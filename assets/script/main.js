@@ -8,9 +8,9 @@ $(function () {
 
         function initializeSwiper() {
             swiper = new Swiper('.swiper', {
-                spaceBetween: 10,
+                spaceBetween: 15,
                 loop: true,
-                slidesPerView: 1.5,
+                slidesPerView: 1.245,
                 centeredSlides: true,
                 // loopAdditionalSlides: 2,
                 pagination: {
