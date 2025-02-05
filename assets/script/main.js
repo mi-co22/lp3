@@ -2,9 +2,8 @@ $(function () {
     //-----------------------------------------------------
     // スライダー
     //-----------------------------------------------------
-    // スライダー機能
     function initSwiper() {
-        var swiper;
+        let swiper;
 
         function initializeSwiper() {
             swiper = new Swiper('.swiper', {
@@ -12,7 +11,7 @@ $(function () {
                 loop: true,
                 slidesPerView: 1.245,
                 centeredSlides: true,
-                // loopAdditionalSlides: 2,
+                autoHeight: true,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,

@@ -45,6 +45,10 @@
     &--attention {
         background: $color-attention;
 
+        &:focus,
+        &:hover {
+            background-color: $color-attention-bright;
+        }
     }
 }
 
@@ -52,7 +56,6 @@
     &__title {
         line-height: 1;
         padding: vw(13);
-
         background: $color-attention;
         color: $color-contrast;
         font-size: vw(18);
@@ -61,14 +64,12 @@
 
         @include mq {
             padding: vwt(24)vwt(20) vwt(21);
-
             border-radius: vwt(10) vwt(10) 0 0;
             font-size: vwt(28);
-
         }
 
         @include mq(lg) {
-            padding: px2Rem(24) vwt(20) px2Rem(21);
+            padding: px2Rem(24) px2Rem(20) px2Rem(21);
             border-radius: px2Rem(10) px2Rem(10) 0 0;
             font-size: px2Rem(28);
 
@@ -78,22 +79,17 @@
             padding-bottom: vw(13);
 
             @include mq {
-                padding: vwt(21)vwt(20) vwt(24);
-
-
+                padding: vwt(21) vwt(20) vwt(24);
             }
 
             @include mq(lg) {
-                padding: px2Rem(21) vwt(20) px2Rem(24);
+                padding: px2Rem(21) px2Rem(20) px2Rem(24);
             }
         }
-
-
 
         &--large {
             font-size: vw(21);
             padding: vw(4) vw(7) vw(6);
-
 
             @include mq {
                 font-size: vwt(32);
@@ -113,30 +109,23 @@
         border: 1px solid $color-attention;
         padding: vw(20);
         border-radius: 0 0 vw(10) vw(10);
-        // letter-spacing: 0.003em;
         line-height: 1.63;
         background: $color-contrast;
 
         @include mq {
             padding: vwt(24) vwt(41) vwt(35);
             border-radius: 0 0 vwt(10) vwt(10);
-
             font-size: vwt(21);
-
         }
 
         @include mq(lg) {
             padding: px2Rem(24) px2Rem(41) px2Rem(35);
-
             border-radius: 0 0 px2Rem(10) px2Rem(10);
             font-size: px2Rem(21);
-
-
         }
     }
 
     &__text {
-
         font-size: vw(14);
         line-height: 1.6;
 
@@ -148,7 +137,6 @@
 
         @include mq(lg) {
             font-size: px2Rem(21);
-
         }
 
         &--fix {
@@ -156,7 +144,6 @@
 
             @include mq {
                 letter-spacing: 0.004em;
-
             }
         }
     }
@@ -175,7 +162,6 @@
         font-size: vwt(42);
         @include lineheight(42, 37);
         letter-spacing: 0;
-
     }
 
     @include mq(lg) {
@@ -210,12 +196,10 @@
 
         @include mq {
             margin-right: vwt(9);
-
         }
 
         @include mq(lg) {
             margin-right: px2Rem(9);
-
         }
     }
 
@@ -225,7 +209,6 @@
 
         @include mq {
             margin-left: vwt(7);
-
         }
 
         @include mq(lg) {
@@ -249,12 +232,10 @@
 
     @include mq {
         height: vwt(92);
-
     }
 
     @include mq(lg) {
         height: px2Rem(92);
-
     }
 
     &__container {
@@ -272,7 +253,6 @@
         @include mq(lg) {
             max-width: px2Rem(1090);
             padding: 0 px2Rem(30);
-
         }
     }
 
@@ -289,7 +269,6 @@
         @include mq(lg) {
             width: px2Rem(97);
             margin-left: px2Rem(3);
-
         }
     }
 
@@ -300,7 +279,6 @@
         @include mq {
             gap: vwt(20);
             margin-top: vwt(-3);
-
         }
 
         @include mq(lg) {
@@ -363,7 +341,6 @@
 
     &__logo {
         width: vw(72);
-
         margin-inline: auto;
 
         @include mq {
@@ -432,10 +409,6 @@
         }
     }
 
-    // &__title-image {
-    //     width: vw(166);
-    // }
-
     &__label-wrapper {
         width: vw(188);
         padding: vw(25) 0 vw(23) vw(28);
@@ -470,7 +443,6 @@
         padding: vw(4) 0 vw(4) vw(3);
         margin-bottom: vw(7);
         width: vw(46);
-        // @include lineheight(13, 60);
 
         @include mq {
             font-size: vwt(29);
@@ -530,8 +502,6 @@
         &--large {
             font-size: vw(76);
             line-height: 0.62;
-            font-variant-numeric: tabular-nums;
-            /* 等幅数字に統一 */
 
             @include mq {
                 font-size: vwt(171);
@@ -783,10 +753,7 @@
             font-size: px2Rem(14);
             margin-top: px2Rem(15);
         }
-
     }
-
-
 }
 
 
@@ -795,11 +762,11 @@
         padding: vw(14) vw(20)vw(37);
 
         @include mq {
-            padding: vwt(56) vwt(30)vwt(56);
+            padding: vwt(56) vwt(30) vwt(56);
         }
 
         @include mq(lg) {
-            padding: px2Rem(56) px2Rem(30)px2Rem(56);
+            padding: px2Rem(56) px2Rem(30) px2Rem(56);
         }
 
         &--fix {
@@ -934,15 +901,11 @@
             margin-bottom: vw(9);
 
             @include mq {
-
                 margin-bottom: vwt(16);
-
             }
 
             @include mq(lg) {
-
                 margin-bottom: px2Rem(16);
-
             }
         }
     }
@@ -988,14 +951,7 @@
     }
 
     &__button-space {
-        // margin-left: 0.29em;
         display: inline-block;
-
-        @include mq {
-            // margin-left: 0.18em;
-
-        }
-
     }
 }
 
@@ -1104,19 +1060,19 @@
 
     &__6column {
         display: flex;
-        // max-width: vw(325);
+        max-width: vw(325);
         margin: vw(24) 0 0;
         gap: vw(16) vw(12);
         flex-wrap: wrap;
 
         @include mq {
-            // max-width: vwt(660);
+            max-width: vwt(660);
             margin: vwt(24) vwt(18) 0;
             gap: vwt(12);
         }
 
         @include mq(lg) {
-            // max-width: px2Rem(660);
+            max-width: px2Rem(660);
             margin: px2Rem(24) px2Rem(18) 0;
             gap: px2Rem(12);
         }
@@ -1127,6 +1083,7 @@
 
         @include mq {
             width: vwt(232);
+            flex: 1 1 auto;
         }
 
         @include mq(lg) {
@@ -1135,10 +1092,12 @@
     }
 
     &__6column-item {
-        width: vw(100);
+        // width: vw(100); ブラウザ幅狭い時に不具合
+        flex: 1 1 calc((100% - vw(12) * 2) / 3);
 
         @include mq {
             width: vwt(100);
+            flex: 1 1 auto;
         }
 
         @include mq(lg) {
@@ -1155,7 +1114,6 @@
 
         @include mq(lg) {
             margin-bottom: px2Rem(4);
-
         }
     }
 
@@ -1170,7 +1128,6 @@
 
         @include mq(lg) {
             font-size: px2Rem(14);
-
         }
     }
 
@@ -1181,7 +1138,6 @@
         width: vw(143);
         border: vw(1) solid #666;
         height: vw(85);
-
 
         @include mq {
             width: vwt(232);
@@ -1198,7 +1154,6 @@
         &--attention {
             border-color: $color-attention;
         }
-
     }
 
     &__image {
@@ -1212,7 +1167,6 @@
         @include mq(lg) {
             width: px2Rem(116);
             margin-left: px2Rem(6);
-
         }
     }
 
@@ -1230,7 +1184,6 @@
             margin: px2Rem(8) auto 0;
             font-size: px2Rem(21);
         }
-
     }
 
     &__text-image {
@@ -1245,7 +1198,6 @@
         @include mq(lg) {
             font-size: px2Rem(29);
         }
-
     }
 
     &__title {
@@ -1271,10 +1223,8 @@
         margin: 0 vw(8);
 
         @include mq {
-            // letter-spacing: -0.04em;
             margin: 0;
         }
-
     }
 
     &__parts {
@@ -1376,7 +1326,7 @@
             margin-right: vw(7);
 
             @include mq {
-                margin-right: vw(13);
+                margin-right: vwt(13);
 
             }
 
@@ -1390,7 +1340,7 @@
             margin-left: vw(3);
 
             @include mq {
-                margin-left: vw(9);
+                margin-left: vwt(9);
 
             }
 
@@ -1418,22 +1368,16 @@
             max-width: px2Rem(731);
             margin: px2Rem(39) auto 0;
             gap: px2Rem(31);
-
-
         }
     }
 
     &__box {
         @include mq {
             max-width: vwt(350);
-
         }
 
         @include mq(lg) {
             max-width: px2Rem(350);
-
-
-
         }
     }
 
@@ -1446,7 +1390,6 @@
         @include mq {
             font-size: vwt(28);
             padding: vwt(15);
-            // letter-spacing: 0.025em;
         }
 
         @include mq(lg) {
@@ -1467,26 +1410,14 @@
 
         @include mq(lg) {
             padding: px2Rem(9) px2Rem(19) px2Rem(19) px2Rem(19);
-
             font-size: px2Rem(18);
         }
-
-        // &--fix {
-        //     @include mq {
-        //         padding: vwt(9) vwt(4) vwt(19) vwt(20);
-        //     }
-
-        //     @include mq(lg) {
-        //         padding: px2Rem(9) px2Rem(4) px2Rem(19) px2Rem(20);
-        //     }
-        // }
     }
 
     &__text {
         @include lineheight(14, 21);
         letter-spacing: 0.0065em;
         margin-bottom: vw(14);
-
 
         &--fix {
             display: inline;
@@ -1513,8 +1444,6 @@
         @include mq(lg) {
             margin-bottom: px2Rem(14);
             font-size: px2Rem(18);
-
-
         }
     }
 }
@@ -1576,15 +1505,17 @@
     }
 
     &__box {
-        // height: vw(187);
 
         @include mq {
-            width: vwt(350);
+            // width: vwt(350); ブラウザ幅狭い時に不具合
             height: auto;
+            flex: 1 1 calc((100% - vwt(15) * 2) / 3);
         }
 
         @include mq(lg) {
-            width: px2Rem(350);
+            // width: px2Rem(350); ブラウザ幅狭い時に不具合
+            flex: 1 1 calc((100% - px2Rem(15) * 2) / 3);
+
         }
     }
 
@@ -1602,11 +1533,9 @@
         }
     }
 
-
-
-
     &__wrapper {
         display: flex;
+        align-items: flex-start;
     }
 
     &__right {
@@ -1631,8 +1560,6 @@
 
         @include mq(lg) {
             font-size: px2Rem(16);
-
-
         }
     }
 
@@ -1642,7 +1569,6 @@
 
         @include mq {
             margin-left: 0.18em;
-
         }
 
     }
@@ -1656,7 +1582,6 @@
 
         @include mq(lg) {
             width: px2Rem(86);
-
         }
     }
 
@@ -1673,8 +1598,6 @@
         @include mq(lg) {
             font-size: px2Rem(14);
             margin-top: px2Rem(6);
-
-
         }
     }
 
@@ -1687,8 +1610,6 @@
 
         @include mq(lg) {
             width: px2Rem(310);
-
-
         }
     }
 
@@ -1698,14 +1619,12 @@
         @include mq {
             font-size: vwt(18);
             padding: vwt(13);
-
         }
 
         @include mq(lg) {
             font-size: px2Rem(18);
             padding: px2Rem(13);
         }
-
     }
 }
 
@@ -1720,9 +1639,7 @@
     }
 }
 
-
 .swiper-wrapper {
-
     @include mq {
         gap: vwt(15);
     }
@@ -1748,3 +1665,8 @@
 .swiper-pagination-bullet-active {
     background: $color-attention
 }
+
+// .swiper-autoheight,
+// .swiper-autoheight .swiper-slide {
+//     height: 100% !important;
+// }

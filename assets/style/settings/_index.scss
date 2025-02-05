@@ -11,12 +11,14 @@ $color-second: #4d2b1b;
 $color-warning: #fffd7a;
 $color-contrast: #fff;
 $color-attention: #fa7da3;
+$color-attention-bright: #fea5c0;
 $color-success: #49c43d;
+$color-success-bright: #40e02f;
 $color-emphasis: #50bfff;
 $color-bg: #fdf0f5;
 
 // フォントファミリー
-$font-family: "Noto Sans JP", 'Outfit', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', meiryo, sans-serif;
+$font-family: 'Noto Sans JP', arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', 'BIZ UDPGothic', meiryo, sans-serif;
 // コンテンツ幅の指定
 $sp-full-width: 390; // スマホ用のカンプ幅
 $pc-full-width: 1440; // PC用のカンプ幅
@@ -127,7 +129,7 @@ a {
 
     &:focus,
     &:hover {
-        opacity: 0.6;
+        background-color: $color-success-bright;
     }
 }
 
