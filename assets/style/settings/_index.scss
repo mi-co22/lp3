@@ -119,8 +119,6 @@ body {
     font-size: vw(14);
     overflow-x: hidden;
     @include responsive-prop(font-size, 16);
-    font-variant-numeric: tabular-nums;
-    /* 等幅数字に統一 */
 }
 
 a {

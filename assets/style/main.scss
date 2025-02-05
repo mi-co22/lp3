@@ -172,22 +172,17 @@
     &::after {
         content: "";
         display: block;
-
         width: vw(38);
         height: vw(46);
 
-        // position: absolute;
-        // top: 6%;
         @include mq {
             width: vwt(50);
             height: vwt(60);
-
         }
 
         @include mq(lg) {
             width: px2Rem(50);
             height: px2Rem(60);
-
         }
     }
 
@@ -440,7 +435,7 @@
         color: $color-attention;
         background: $color-contrast;
         font-size: vw(13);
-        padding: vw(4) 0 vw(4) vw(3);
+        padding: vw(4) 0 vw(6) vw(3);
         margin-bottom: vw(7);
         width: vw(46);
 
@@ -1521,8 +1516,11 @@
 
 
     &__body {
-
         padding: vw(16) vw(19) vw(11);
+
+        @media (min-width: 391px) and (max-width: 767px) {
+            padding: vw(16) vw(15) vw(11);
+        }
 
         @include mq {
             padding: vwt(16) vwt(18) vwt(13);
@@ -1531,6 +1529,7 @@
         @include mq(lg) {
             padding: px2Rem(16) px2Rem(18) px2Rem(13);
         }
+
     }
 
     &__wrapper {
@@ -1663,10 +1662,5 @@
 }
 
 .swiper-pagination-bullet-active {
-    background: $color-attention
+    background: $color-attention;
 }
-
-// .swiper-autoheight,
-// .swiper-autoheight .swiper-slide {
-//     height: 100% !important;
-// }
