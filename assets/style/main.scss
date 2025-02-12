@@ -2,11 +2,9 @@
 @use "./settings/" as *;
 @use "sass:math";
 
-
-
-//-----------------------------------------------------
-// コンポーネント
-//-----------------------------------------------------
+/* ===========================================
+ * コンポーネント
+ * ======================================== */
 
 .button {
     display: block;
@@ -76,7 +74,7 @@
         }
 
         &--fix {
-            padding-bottom: vw(13);
+            padding-bottom: vw(14);
 
             @include mq {
                 padding: vwt(21) vwt(20) vwt(24);
@@ -213,10 +211,9 @@
     }
 }
 
-//-----------------------------------------------------
-// ヘッダー
-//-----------------------------------------------------
-
+/* ===========================================
+ * ヘッダー
+ * ======================================== */
 .header {
     position: fixed;
     top: 0;
@@ -273,12 +270,12 @@
 
         @include mq {
             gap: vwt(20);
-            margin-top: vwt(-3);
+            margin-top: vwt(2);
         }
 
         @include mq(lg) {
             gap: px2Rem(20);
-            margin-top: px2Rem(-3);
+            margin-top: px2Rem(2);
 
         }
     }
@@ -315,9 +312,9 @@
     }
 }
 
-//-----------------------------------------------------
-// フッター
-//-----------------------------------------------------
+/* ===========================================
+ * フッター
+ * ======================================== */
 .footer {
     background: $color-attention;
 
@@ -348,9 +345,9 @@
     }
 }
 
-// -----------------------------------------------------
-// メインビジュアル
-// -----------------------------------------------------
+/* ===========================================
+ * メインビジュアル
+ * ======================================== */
 .mainvisual {
     margin-top: vw(60);
     color: $color-contrast;
@@ -583,9 +580,10 @@
     }
 }
 
-//-----------------------------------------------------
-// レイアウト
-//-----------------------------------------------------
+/* ===========================================
+ * レイアウト
+ * ======================================== */
+/** ニュース **/
 .news {
     background: #fffedd;
 
@@ -751,7 +749,7 @@
     }
 }
 
-
+/** カウンセリング予約 **/
 .cta {
     &__container {
         padding: vw(14) vw(20)vw(37);
@@ -931,15 +929,15 @@
                 width: vwt(20);
                 height: vwt(20);
                 right: 9.7%;
-                border-top: vwt(2) solid;
-                border-right: vwt(2) solid;
+                border-top: vwt(3) solid;
+                border-right: vwt(3) solid;
             }
 
             @include mq(lg) {
                 width: px2Rem(20);
                 height: px2Rem(20);
-                border-top: px2Rem(2) solid;
-                border-right: px2Rem(2) solid;
+                border-top: px2Rem(3) solid;
+                border-right: px2Rem(3) solid;
             }
         }
 
@@ -950,6 +948,7 @@
     }
 }
 
+/** 3つのポイント **/
 .feature {
     background: $color-bg;
 
@@ -1027,6 +1026,18 @@
 
         @include mq(lg) {
             margin-bottom: px2Rem(50);
+        }
+
+        &--margin-bottom {
+            margin-bottom: vw(30);
+
+            @include mq {
+                margin-bottom: vwt(50);
+            }
+
+            @include mq(lg) {
+                margin-bottom: px2Rem(50);
+            }
         }
 
         &:last-child {
@@ -1263,6 +1274,7 @@
     }
 }
 
+/** 2つのコース **/
 .course {
     &__container {
         padding: vw(26) vw(20)vw(20);
@@ -1443,6 +1455,7 @@
     }
 }
 
+/** お客様の声 **/
 .voice {
     background: $color-bg;
 
@@ -1498,22 +1511,6 @@
             margin: px2Rem(36) auto 0;
         }
     }
-
-    &__box {
-
-        @include mq {
-            // width: vwt(350); ブラウザ幅狭い時に不具合
-            height: auto;
-            flex: 1 1 calc((100% - vwt(15) * 2) / 3);
-        }
-
-        @include mq(lg) {
-            // width: px2Rem(350); ブラウザ幅狭い時に不具合
-            flex: 1 1 calc((100% - px2Rem(15) * 2) / 3);
-
-        }
-    }
-
 
     &__body {
         padding: vw(16) vw(19) vw(11);
@@ -1635,16 +1632,6 @@
         flex-wrap: wrap;
         gap: vw(7);
         margin-top: vw(20);
-    }
-}
-
-.swiper-wrapper {
-    @include mq {
-        gap: vwt(15);
-    }
-
-    @include mq(lg) {
-        gap: px2Rem(15);
     }
 }
 

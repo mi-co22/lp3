@@ -109,14 +109,12 @@ $breakpoints: (
 
 
 //-----------------------------------------------------
-// base
+// base: ベース
 //-----------------------------------------------------
 body {
     color: $color-normal;
     font-family: $font-family;
-    /* プロポーショナル数字を適用 */
     @include lineheight(14, 21);
-    font-size: vw(14);
     overflow-x: hidden;
     @include responsive-prop(font-size, 16);
 }
@@ -135,26 +133,4 @@ img {
     display: block;
     width: 100%;
     height: auto;
-}
-
-.sp-block {
-    display: block;
-
-    @include mq {
-        display: none;
-    }
-}
-
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    margin: -1px;
 }

@@ -3,9 +3,7 @@
 body {
     color: #333;
     font-family: "Noto Sans JP", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", meiryo, sans-serif;
-    /* プロポーショナル数字を適用 */
     line-height: 1.5;
-    font-size: 3.5897435897vw;
     overflow-x: hidden;
     font-size: 4.1025641026vw;
 }
@@ -38,30 +36,9 @@ img {
     height: auto;
 }
 
-.sp-block {
-    display: block;
-}
-
-@media screen and (min-width: 768px) {
-    .sp-block {
-        display: none;
-    }
-}
-
-.visually-hidden {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    -webkit-clip-path: inset(50%);
-    clip-path: inset(50%);
-    margin: -1px;
-}
-
+/* ===========================================
+ * コンポーネント
+ * ======================================== */
 .button {
     display: block;
     margin-inline: auto;
@@ -137,7 +114,7 @@ img {
 }
 
 .box__title--fix {
-    padding-bottom: 3.3333333333vw;
+    padding-bottom: 3.5897435897vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -307,6 +284,9 @@ img {
     }
 }
 
+/* ===========================================
+ * ヘッダー
+ * ======================================== */
 .header {
     position: fixed;
     top: 0;
@@ -378,14 +358,14 @@ img {
 @media screen and (min-width: 768px) {
     .header__list {
         gap: 1.9417475728vw;
-        margin-top: -0.2912621359vw;
+        margin-top: 0.1941747573vw;
     }
 }
 
 @media screen and (min-width: 1030px) {
     .header__list {
         gap: 1.25rem;
-        margin-top: -0.1875rem;
+        margin-top: 0.125rem;
     }
 }
 
@@ -428,6 +408,9 @@ img {
     }
 }
 
+/* ===========================================
+ * フッター
+ * ======================================== */
 .footer {
     background: #fa7da3;
 }
@@ -465,6 +448,9 @@ img {
     }
 }
 
+/* ===========================================
+ * メインビジュアル
+ * ======================================== */
 .mainvisual {
     margin-top: 15.3846153846vw;
     color: #fff;
@@ -747,6 +733,10 @@ img {
     }
 }
 
+/* ===========================================
+ * レイアウト
+ * ======================================== */
+/** ニュース **/
 .news {
     background: #fffedd;
 }
@@ -947,6 +937,7 @@ img {
     }
 }
 
+/** カウンセリング予約 **/
 .cta__container {
     padding: 3.5897435897vw 5.1282051282vw 9.4871794872vw;
 }
@@ -1161,8 +1152,8 @@ img {
         width: 1.9417475728vw;
         height: 1.9417475728vw;
         right: 9.7%;
-        border-top: 0.1941747573vw solid;
-        border-right: 0.1941747573vw solid;
+        border-top: 0.2912621359vw solid;
+        border-right: 0.2912621359vw solid;
     }
 }
 
@@ -1170,8 +1161,8 @@ img {
     .cv__button::after {
         width: 1.25rem;
         height: 1.25rem;
-        border-top: 0.125rem solid;
-        border-right: 0.125rem solid;
+        border-top: 0.1875rem solid;
+        border-right: 0.1875rem solid;
     }
 }
 
@@ -1179,6 +1170,7 @@ img {
     display: inline-block;
 }
 
+/** 3つのポイント **/
 .feature {
     background: #fdf0f5;
 }
@@ -1275,6 +1267,22 @@ img {
 
 @media screen and (min-width: 1030px) {
     .feature__box {
+        margin-bottom: 3.125rem;
+    }
+}
+
+.feature__box--margin-bottom {
+    margin-bottom: 7.6923076923vw;
+}
+
+@media screen and (min-width: 768px) {
+    .feature__box--margin-bottom {
+        margin-bottom: 4.854368932vw;
+    }
+}
+
+@media screen and (min-width: 1030px) {
+    .feature__box--margin-bottom {
         margin-bottom: 3.125rem;
     }
 }
@@ -1567,6 +1575,7 @@ img {
     }
 }
 
+/** 2つのコース **/
 .course__container {
     padding: 6.6666666667vw 5.1282051282vw 5.1282051282vw;
 }
@@ -1782,6 +1791,7 @@ img {
     }
 }
 
+/** お客様の声 **/
 .voice {
     background: #fdf0f5;
 }
@@ -1849,19 +1859,6 @@ img {
     .voice__box-wrapper {
         max-width: 60rem;
         margin: 2.25rem auto 0;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .voice__box {
-        height: auto;
-        flex: 1 1 calc((100% - 2.9126213592vw) / 3);
-    }
-}
-
-@media screen and (min-width: 1030px) {
-    .voice__box {
-        flex: 1 1 calc((100% - 1.875rem) / 3);
     }
 }
 
@@ -2013,18 +2010,6 @@ img {
     flex-wrap: wrap;
     gap: 1.7948717949vw;
     margin-top: 5.1282051282vw;
-}
-
-@media screen and (min-width: 768px) {
-    .swiper-wrapper {
-        gap: 1.4563106796vw;
-    }
-}
-
-@media screen and (min-width: 1030px) {
-    .swiper-wrapper {
-        gap: 0.9375rem;
-    }
 }
 
 @media screen and (min-width: 768px) {
